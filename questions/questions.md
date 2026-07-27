@@ -18,7 +18,7 @@ Hello Marissa,
 
 Thank you for reaching out and sharing your feedback. I understand your frustration regarding core actions such as clearing and/or deleting indexes and the slowness experienced while iterating.
 
-While this change was implemented to prevent accidental deletions, we truly appreciate your feedback as we work to improve the interface. In the meantime, you can use the Algolia CLI or API to perform these actions efficiently via code.
+While this change was implemented to prevent accidental deletions, we truly appreciate your feedback as we work to improve the interface. In the meantime, you can use the Algolia CLI (https://www.algolia.com/doc/tools/cli/get-started) or API (https://www.algolia.com/doc/guides/sending-and-managing-data/manage-indices-and-apps/manage-indices/how-to/delete-indices) to perform these actions efficiently via code.
 
 Please let us know if you have any other suggestions.
 
@@ -45,7 +45,7 @@ Hello Carrie,
 
 I am sorry for the disruption this is causing on your production site. The "Record is too big" error occurs because Algolia records have a strict size limit (As looking to your subscription plan, 100KB for any individual records).
 
-Looking at the type of website you have, you should avoid storing excessive, non-searchable metadata inside Algolia. Keep only searchable and filterable attributes in Algolia, and store the heavy metadata in your primary database.
+Looking at the type of website you have, you should avoid storing excessive, non-searchable metadata inside Algolia. Keep only searchable and filterable attributes in Algolia, and store the heavy metadata in your primary database. If you don't know if this field shoud be remove, ask yourself "Would a user search for this field or does it need to appear in the result?" If the answer is no to those two questions, then it's not needed in Algolia
 
 Once you reduce the record payload below the size limit, the errors will stop immediately. Let us know if you need help adjusting your record structure!
 
@@ -78,6 +78,11 @@ To solve this issue :
 - Ensure that searchkit is correctly imported at the top of your JavaScript file (e.g., **import searchkit from 'searchkit';**).
 
 - If it is an external dependency, verify that the package is installed in your project via your package manager (**npm install searchkit**).
+
+To be sure, could you share me : 
+- The URL of the affected page
+- Any recent changes you may have made
+- The code where the searchkit is referenced
 
 Please let me know if you need further assistance !
 
